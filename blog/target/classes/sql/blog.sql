@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50723
 File Encoding         : 65001
 
-Date: 2020-12-03 15:46:14
+Date: 2020-12-03 16:36:09
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -41,12 +41,13 @@ CREATE TABLE `t_blog` (
   KEY `FK8ky5rrsxh01nkhctmo7d48p82` (`user_id`),
   CONSTRAINT `FK292449gwg5yf7ocdlmswv9w4j` FOREIGN KEY (`type_id`) REFERENCES `t_type` (`id`),
   CONSTRAINT `FK8ky5rrsxh01nkhctmo7d48p82` FOREIGN KEY (`user_id`) REFERENCES `t_user` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 -- ----------------------------
 -- Records of t_blog
 -- ----------------------------
-INSERT INTO `t_blog` VALUES ('14', '', '', 0x7361276473617364610D0A0D0A230D0A0D0A0D0A6373660D0A2366647366736466230D0A0D0A0D0A23437364, '2020-04-21 17:05:32', '啊实打实大大', '大送', '', '\0', '', '', 'a\'sassa\'da', '2020-04-21 17:05:32', '1', '1', '1');
+INSERT INTO `t_blog` VALUES ('14', '', '', 0x7361276473617364610D0A0D0A230D0A0D0A0D0A6373660D0A2366647366736466230D0A0D0A0D0A23437364, '2020-04-21 17:05:32', '啊实打实大大', 'https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=857716267,1776204812&fm=26&gp=0.jpg', '', '\0', '', '', 'a\'sassa\'da', '2020-04-21 17:05:32', '3', '1', '1');
+INSERT INTO `t_blog` VALUES ('15', '', '', 0x34343634366A626A6B0D0A0D0A0D0A0D0A75790D0A6B660D0A68666A0D0A67680D0A6A0D0A640D0A680D0A64670D0A680D0A67680D0A, '2020-12-03 16:26:04', 'kjhakc', 'https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=857716267,1776204812&fm=26&gp=0.jpg', '', '', '', '', 'java', '2020-12-03 16:26:12', '0', '1', '1');
 
 -- ----------------------------
 -- Table structure for t_blog_tags
@@ -65,6 +66,7 @@ CREATE TABLE `t_blog_tags` (
 -- Records of t_blog_tags
 -- ----------------------------
 INSERT INTO `t_blog_tags` VALUES ('14', '1');
+INSERT INTO `t_blog_tags` VALUES ('15', '1');
 
 -- ----------------------------
 -- Table structure for t_comment
@@ -107,7 +109,7 @@ CREATE TABLE `t_tag` (
 -- ----------------------------
 -- Records of t_tag
 -- ----------------------------
-INSERT INTO `t_tag` VALUES ('1', 'springboot');
+INSERT INTO `t_tag` VALUES ('1', 'springboot1');
 
 -- ----------------------------
 -- Table structure for t_type
@@ -117,13 +119,12 @@ CREATE TABLE `t_type` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
   `name` varchar(255) COLLATE utf8_bin NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 -- ----------------------------
 -- Records of t_type
 -- ----------------------------
 INSERT INTO `t_type` VALUES ('1', 'springboot整合');
-INSERT INTO `t_type` VALUES ('2', 'mybatissdsa');
 
 -- ----------------------------
 -- Table structure for t_user
